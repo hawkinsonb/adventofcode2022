@@ -14,24 +14,35 @@ func TestWhatElfHasTheMostCalories(t *testing.T) {
 	}{
 		{
 			name: "all elves have the same number of calories",
-			input: "5\n\n5\n\n5\n",
+			input: "10\n\n10\n\n10\n\n10\n\n10\n",
 			want: 0,
 		},
 		{
 			name: "first elf has the most calories",
-			input: "5\n\n5\n\n1\n",
+			input: "15\n\n10\n\n5\n\n5\n\n5\n",
 			want: 0,
 		},
 		{
 			name: "second elf has the most calories",
-			input: "1\n\n5\n\n5\n",
+			input: "5\n\n15\n\n10\n\n5\n\n5\n",
 			want: 1,
 		},
 		{
-			name: "last elf has the most calories",
-			input: "1\n\n1\n\n5\n",
+			name: "third elf has the most calories",
+			input: "5\n\n5\n\n15\n\n10\n\n5\n",
 			want: 2,
 		},
+		{
+			name: "fourth elf has the most calories",
+			input: "5\n\n5\n\n5\n\n15\n\n10\n",
+			want: 3,
+		},
+		{
+			name: "last elf has the most calories",
+			input: "5\n\n5\n\n5\n\n5\n\n15\n",
+			want: 4,
+		},
+
 		{
 			name: "empty input file",
 			input: "",

@@ -39,11 +39,17 @@ func WhatElfHasTheMostCalories(filePath string) int {
 
 			elfCalories = 0
 			elf++
+
 		} else {
 			integer, _ := strconv.Atoi(line)
 			elfCalories += integer
 		}
     }
+
+	if (elfCalories > currentHighestElfCalories) {
+		currentHighestElf = elf
+		currentHighestElfCalories = elfCalories
+	}
 
 	return currentHighestElf
 }
